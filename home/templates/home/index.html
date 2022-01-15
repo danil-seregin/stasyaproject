@@ -1,0 +1,281 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Carousel Template · Bootstrap v5.1</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        #header {
+            background-image: url("{% static 'images/header_image.jpg' %}");
+            background-size: 100%;
+
+        }
+        #cards {
+            background-image: url("{% static 'images/bg_cards.png' %}");
+            background-size: 100%;
+            background-color: rgba(226, 226, 226, 1);
+        }
+        #card {
+            background-color: rgba(169, 5, 5, 0);
+        }
+        .card {
+            cursor: pointer;
+            width: 400px;
+            height: 400px;
+            margin-top: 30px;
+        }
+
+        .front,
+        .back {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            backface-visibility: hidden;
+            position: absolute;
+            transition: transform .6s linear;
+        }
+
+        .front img {
+            height: 100%;
+        }
+
+        .front {
+            transform: perspective(600px) rotateY(0deg);
+        }
+
+        .back {
+            transform: perspective(600px) rotateY(180deg);
+            background-color: #f1f1f1;
+        }
+
+        .back-content {
+            width: 100%;
+            text-align: center;
+            color: #333333;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        span {
+            display: block;
+            font-size: 20px;
+        }
+
+        .fas {
+            display: block;
+            margin: 20px 0;
+            color: red;
+            font-size: 30px;
+        }
+
+        .card:hover > .front {
+            transform: perspective(600px) rotateY(-180deg);
+        }
+
+        .card:hover > .back {
+            transform: perspective(600px) rotateY(0deg);
+        }
+
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'home/css/carousel.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    {% include 'navbar.html' %}
+</header>
+
+<main id="header">
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
+        <div class="col-md-5 p-lg-5 mx-auto my-5 ">
+            <h1 class="display-4 fw-normal" style="color: #5a5a5a;text-align: left;">Контакты</h1>
+            <p class="lead fw-normal" style="color: #5a5a5a;text-align: left;">Телефон: 54645764577<br>
+                Email: ваолпирвар@fsgfdg.df<br>
+                Адрес: sfdghdfhdghghghgfh<br>
+                gfjfgjtgjgf<br>
+            </p>
+        </div>
+        <div class="product-device shadow-sm d-none d-md-block"></div>
+        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    </div>
+    <div class="px-4 py-5 my-5 text-center">
+        <div class="col-lg-6 mx-auto">
+            <img src="{% static 'logos/logo.jpg' %}" alt="" width="400px" style="margin-left: -50px">
+        </div>
+    </div>
+    <div class="px-4 py-5 text-center" id="cards">
+        <h1>Наши Услуги</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card center" id="card">
+                        <div class="front">
+                            <img src="{% static 'images/card1.jpg' %}" alt="">
+                        </div>
+                        <div class="back">
+                            <div class="back-content center">
+                                <h2>Aniskovich Anton</h2>
+                                <span>Подпишись на канал!</span>
+                                <span>и ставьте</span>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card center" id="card">
+                        <div class="front">
+                            <img src="{% static 'images/card1.jpg' %}" alt="">
+                        </div>
+                        <div class="back">
+                            <div class="back-content center">
+                                <h2>Aniskovich Anton</h2>
+                                <span>Подпишись на канал!</span>
+                                <span>и ставьте</span>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card center" id="card">
+                        <div class="front">
+                            <img src="{% static 'images/card1.jpg' %}" alt="">
+                        </div>
+                        <div class="back">
+                            <div class="back-content center">
+                                <h2>Aniskovich Anton</h2>
+                                <span>Подпишись на канал!</span>
+                                <span>и ставьте</span>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card center" id="card">
+                        <div class="front">
+                            <img src="{% static 'images/card1.jpg' %}" alt="">
+                        </div>
+                        <div class="back">
+                            <div class="back-content center">
+                                <h2>Aniskovich Anton</h2>
+                                <span>Подпишись на канал!</span>
+                                <span>и ставьте</span>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card center" id="card" style="height: 831px;">
+                        <div class="front">
+                            <img src="{% static 'images/card1.jpg' %}" alt="">
+                        </div>
+                        <div class="back">
+                            <div class="back-content center">
+                                <h2>Aniskovich Anton</h2>
+                                <span>Подпишись на канал!</span>
+                                <span>и ставьте</span>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card center" id="card">
+                        <div class="front">
+                            <img src="{% static 'images/card1.jpg' %}" alt="">
+                        </div>
+                        <div class="back">
+                            <div class="back-content center">
+                                <h2>Aniskovich Anton</h2>
+                                <span>Подпишись на канал!</span>
+                                <span>и ставьте</span>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card center" id="card">
+                        <div class="front">
+                            <img src="{% static 'images/card1.jpg' %}" alt="">
+                        </div>
+                        <div class="back">
+                            <div class="back-content center">
+                                <h2>Aniskovich Anton</h2>
+                                <span>Подпишись на канал!</span>
+                                <span>и ставьте</span>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card center" id="card">
+                        <div class="front">
+                            <img src="{% static 'images/card1.jpg' %}" alt="">
+                        </div>
+                        <div class="back">
+                            <div class="back-content center">
+                                <h2>Aniskovich Anton</h2>
+                                <span>Подпишись на канал!</span>
+                                <span>и ставьте</span>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" style="margin-top: 50px;">Заказать услугу</button>
+        </div>
+    </div>
+    {% include 'home/carusel_body.html' %}
+    {% include 'home/carusel_friends.html' %}
+    {% include 'home/otzyv.html' %}
+    {% include 'home/newhome/questions.html' %}
+    {% include 'home/newhome/carusel.html' %}
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+
+
+
+    <!-- FOOTER -->
+    <div class="d-flex align-items-start bg-dark">
+        <footer class="container" width="100%" height="100px">
+            <p class="float-end"><a href="#">Вернуться наверх</a></p>
+            <p>&copy; 2021 Company, Inc. &middot;</p>
+        </footer>
+    </div>
+</main>
+
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+
+
+</body>
+</html>

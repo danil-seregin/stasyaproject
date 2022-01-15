@@ -1,0 +1,160 @@
+{% load static %}
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    #submitsert {
+        background-image: url("{% static 'img/sertfoto.jpg' %}");
+        background-size: 700px 500px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+</style>
+{% for i in data %}
+    <div id="myCarousel" class="carousel slide bg-dark" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777"/>
+                </svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>{{ i.slide1_header }}</h1>
+                        <p>{{ i.slide1 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777"/>
+                </svg>
+
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>{{ i.slide2_header }}</h1>
+                        <p>{{ i.slide2 }}</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777"/>
+                </svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>{{ i.slide3_header }}</h1>
+                        <p>{{ i.slide3 }}</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing bg-light" style="margin-top: -65px;">
+
+        <!-- Three columns of text below the carousel -->
+        <h2 style="margin-top: 100px; text-align: center">Заполните форму для получения сертификата</h2>
+        <div class="container bg-light" id="submitsert" style="height: 500px;">
+            <div class="container" style="width: 500px; height: 300px; margin-left: 400px;">
+                {% include 'uslugi/application_form.html' %}
+            </div>
+        </div>
+        <hr class="featurette-divider" style="margin-top: 130px;">
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-lg-4">
+                <h2>{{ i.heading1_header }}</h2>
+                <p>{{ i.heading1 }}</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <h2>{{ i.heading2_header }}</h2>
+                <p>{{ i.heading2 }}</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <h2>{{ i.heading3_header }}</h2>
+                <p>{{ i.heading3 }}</p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">{{ i.featuret1_heading }}</h2>
+                <p class="lead">{{ i.featuret1 }}</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ i.featuret1_image.url }}" height="500" width="500">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">{{ i.featuret2_heading }}</h2>
+                <p class="lead">{{ i.featuret2 }}</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="{{ i.featuret2_image.url }}" height="500" width="500">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">{{ i.featuret3_heading }}</h2>
+                <p class="lead">{{ i.featuret3 }}</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ i.featuret3_image.url }}" height="500" width="500">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+{% endfor %}

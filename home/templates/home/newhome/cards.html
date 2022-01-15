@@ -1,0 +1,146 @@
+{% load static %}
+<style>
+    #cards {
+        background-image: url("{% static 'images/bg_cards.png' %}");
+        background-size: 100%;
+        background-color: rgba(226, 226, 226, 1);
+    }
+
+    #card {
+        background-color: rgba(169, 5, 5, 0);
+    }
+
+    .card {
+        cursor: pointer;
+        width: 400px;
+        height: 400px;
+        margin-top: 30px;
+    }
+
+    .front,
+    .back {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+        transition: transform .6s linear;
+    }
+
+    .front img {
+        height: 100%;
+    }
+
+    .front {
+        transform: perspective(600px) rotateY(0deg);
+    }
+
+    .back {
+        transform: perspective(600px) rotateY(180deg);
+        background-color: #f1f1f1;
+    }
+
+    .back-content {
+        width: 100%;
+        text-align: center;
+        color: #333333;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    span {
+        display: block;
+        font-size: 20px;
+    }
+
+    .fas {
+        display: block;
+        margin: 20px 0;
+        color: red;
+        font-size: 30px;
+    }
+
+    .card:hover > .front {
+        transform: perspective(600px) rotateY(-180deg);
+    }
+
+    .card:hover > .back {
+        transform: perspective(600px) rotateY(0deg);
+    }
+</style>
+<div class="px-4 py-5 text-center" id="cards">
+    <h1>Наши Услуги</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card center" id="card">
+                    <div class="front">
+                        <h1 class="bg-light" style="margin-bottom: 0px;">{{ lefttop.topcard }}</h1>
+                        <img src="{% static 'images/img/5abc43718cd1a-1100x619.jpg' %}" alt="">
+                    </div>
+                    <div class="back">
+                        <div class="back-content center" style="text-align: justify;">
+                            <h2>{{ lefttop.header }}</h2>
+                            <span>{{ lefttop.data }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card center" id="card">
+                    <div class="front">
+                        <h1 class="bg-light" style="margin-bottom: 0px;">{{ leftbot.topcard }}</h1>
+                        <img src="{% static 'images/img/10.1-1.jpg' %}" alt="">
+                    </div>
+                    <div class="back" style="text-align: justify;">
+                        <div class="back-content center">
+                            <h2>{{ leftbot.header }}</h2>
+                            <span>{{ leftbot.data }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card center" id="card" style="height: 831px;">
+                    <div class="front">
+                        <h1 class="bg-light" style="margin-bottom: 0px;">{{ center.topcard }}</h1>
+                        <img src="{% static 'images/img/a909763d50ee179328e55335a09d0dd61213.jpg' %}" alt="">
+                    </div>
+                    <div class="back" style="text-align: justify;">
+                        <div class="back-content center">
+                            <h2>{{ center.header }}</h2>
+                            <span>{{ center.data }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card center" id="card">
+                    <div class="front">
+                        <h1 class="bg-light" style="margin-bottom: 0px;">{{ righttop.topcard }}</h1>
+                        <img src="{% static 'images/card1.jpg' %}" alt="">
+                    </div>
+                    <div class="back" style="text-align: justify;">
+                        <div class="back-content center">
+                            <h2>{{ righttop.header }}</h2>
+                            <span style="text-align: justify; margin-left: 15px;margin-right: 15px">{{ righttop.data }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card center" id="card">
+                    <div class="front" id="textcard">
+                        <h1 class="bg-light" style="margin-bottom: 0px;">{{ rightbot.topcard }}</h1>
+                        <img src="{% static 'images/img/7aba72b46b2827c7de485e5a92f9f34b-big.jpg' %}" alt="">
+                    </div>
+                    <div class="back" style="align-content: justify;">
+                        <div class="back-content center">
+                            <h2>{{ rightbot.header }}</h2>
+                            <span>{{ rightbot.data }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-info" style="margin-top: 50px;">Заказать услугу</button>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label" style="margin-top: 70px;">Название
+            компании</label>
+        {{ form.name }}
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Номер телефона</label>
+        {{ form.contacts }}
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Задайте свой вопрос (Можно оставить
+            поле путым)</label>
+        {{ form.text }}
+    </div>
+    <button type="submit" class="btn btn-primary mb-3" style="margin-bottom: 100px;">Отправить</button>
+</form>

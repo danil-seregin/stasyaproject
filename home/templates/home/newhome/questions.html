@@ -1,0 +1,46 @@
+{% load static %}
+<style>
+    #quest {
+        background-image: url("{% static 'images/bg_cards.png' %}");
+        background-size: 100%;
+        background-color: rgba(226, 226, 226, 1);
+    }
+</style>
+<div class="d-flex align-items-start bg-light" id="quest" style="height: 800px;margin-top: 0px;">
+    <div class="container bg-light" style="height: 700px;">
+        <h1 class="display-4 fw-normal" style="color: #5a5a5a;text-align: center;margin-top: 30px;">Вопросы-ответы</h1>
+        <div class="row" style="margin-top: 50px;margin-bottom: 50px;">
+            <div class="col">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    {% for q in questions %}
+                        {% if forloop.counter0 == 0 %}
+                            <button class="nav-link active" id="id-but-{{ forloop.counter }}" data-bs-toggle="pill"
+                                    data-bs-target="#id-text-{{ forloop.counter0 }}"
+                                    type="button" role="tab" aria-controls="id-text-{{ forloop.counter0 }}" aria-selected="true"
+                                    style="width: 300px; text-align: justify;">
+                                {{ q.question }}
+                            </button>
+                        {% else %}
+                            <button class="nav-link" id="id-but-{{ forloop.counter }}" data-bs-toggle="pill"
+                                    data-bs-target="#id-text-{{ forloop.counter0 }}"
+                                    type="button" role="tab" aria-controls="id-text-{{ forloop.counter0 }}" aria-selected="false"
+                                    style="width: 300px; text-align: justify;">
+                                {{ q.question }}
+                            </button>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col col-xl-8">
+                <div class="tab-content" id="v-pills-tabContent">
+                    {% for a in questions %}
+                        <div class="tab-pane fade show active" id="id-text-{{ forloop.counter0 }}" role="tabpanel"
+                             aria-labelledby="id-but-{{ forloop.counter }}" style="text-align: justify; margin-right: 30px;">
+                            {{ a.answer }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

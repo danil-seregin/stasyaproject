@@ -1,0 +1,313 @@
+{% load static %}
+<style>
+    @media (max-width: 767px) {
+        #innercar .carousel-item > div {
+            display: none;
+        }
+
+        #innercar .carousel-item > div:first-child {
+            display: block;
+        }
+    }
+
+    #innercar .carousel-item.active,
+    #innercar .carousel-item-next,
+    #innercar .carousel-item-prev {
+        display: flex;
+    }
+
+    /* medium and up screens */
+    @media (min-width: 768px) {
+
+        #innercar .carousel-item-end.active,
+        #innercar .carousel-item-next {
+            transform: translateX(25%);
+        }
+
+        #innercar .carousel-item-start.active,
+        #innercar .carousel-item-prev {
+            transform: translateX(-25%);
+        }
+    }
+
+    #innercar .carousel-item-end,
+    #innercar .carousel-item-start {
+        transform: translateX(0);
+    }
+</style>
+<div class="container text-center my-3">
+    <div class="row mx-auto justify-content-center">
+        <div id="recipeCarousel1" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner" role="listbox" id="innercar">
+
+                <div class="carousel-item active" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static '/images/logos/c4.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c2.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c3.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c5.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c6.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c7.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c8.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c9.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c10.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c11.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c12.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c13.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c14.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c15.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c16.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c17.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c18.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c19.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c20.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c21.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c22.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c23.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c24.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c25.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c26.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c27.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" id="target" data-bs-interval="1500">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="{% static 'images/logos/c28.jpg' %}" style="width: 400px;margin-top: 130px;margin-left: -60px;" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel1" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel1" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+    let items = document.querySelectorAll('.carousel .carousel-item, #target')
+
+    items.forEach((el) => {
+        const minPerSlide = 4
+        let next = el.nextElementSibling
+        for (var i = 1; i < minPerSlide; i++) {
+            if (!next) {
+                // wrap carousel by using first child
+                next = items[0]
+            }
+            let cloneChild = next.cloneNode(true)
+            el.appendChild(cloneChild.children[0])
+            next = next.nextElementSibling
+        }
+    })
+</script>
